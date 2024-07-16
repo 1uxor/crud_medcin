@@ -1,0 +1,521 @@
+/* Styles pour la Navbar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-name {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #85bffd;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 40px;
+    position: relative;
+}
+
+.nav-links a {
+    color: #000000;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    color: #5ea4ef;
+}
+
+/* Underline effect */
+.nav-links li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #5ea4ef;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all .7s ease;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-links li:hover::before {
+    transform: scaleX(1);
+}
+
+
+
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.auth-buttons a {
+    width: 150px;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#btn_connecter, #btn_inscrire {
+    background-color: #85bffd;
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.auth-buttons #btn_connecter:hover, .auth-buttons #btn_inscrire:hover {
+    background-color: #6fb1f8;
+}
+
+
+
+/* Styles pour la Section de Bienvenue */
+.welcome-section {
+    position: relative;
+    height: 100vh;
+    background: url('../images/home.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 70px;
+}
+
+/* Style the text */
+.welcome-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.welcome-text p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.welcome-text {
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent background for better text readability */
+    padding: 2rem;
+    border-radius: 5px;
+    transition: all 2s ease;
+}
+.welcome-text:hover{
+    transform: scale(1.01);
+}
+
+
+/* Styles pour les Infos sur l'Hôpital */
+.hospital-info1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 10%;
+}
+
+.info-box {
+    flex: 1;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    margin: 0 10px;
+    transition: all 1s ease;
+
+}
+
+#info1{
+    background-color: #ffffff;
+    border: 3px solid #1CA7EC;
+}
+#info2{
+    background-color: #ffffff;
+    border: 3px solid #1CA7EC;
+}
+#info3{
+    background-color: #ffffff;
+    border: 3px solid #1CA7EC;
+}
+.info-box:hover{
+    transform: scale(1.05);
+}
+
+.info-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-box p {
+    font-size: 1rem;
+    color: #666666;
+}
+
+.questionContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+.question{
+    background-color: #deecfa;
+    padding: 40px;
+    margin-right: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+}
+.icone{
+    display: inline-block;
+    text-align: center;
+}
+.icone img{
+    width: 60px;
+    height: 60px;
+}
+.icone h3{
+    font-weight: 800;
+}
+/* Styles pour la Section sur l'Équipe */
+.team-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 3%;
+}
+
+.team-description {
+    max-width: 45%;
+    background-color: #aee1fa;
+    /*background: rgba(0, 0, 0, 0.1);*/
+    padding: 50px;
+    border-radius: 5px;
+    transition: all 1s ease;
+}
+
+.team-description:hover{
+    background-color: #85bffd;
+}
+
+.team-image img {
+    max-width: 100%;
+    height: auto;
+    transition: all 1s ease;
+    height: 500px;
+    border-radius: 5px;
+}
+.team-image img:hover {
+    transform: scale(1.06);
+}
+
+
+/* Styles pour le Footer */
+
+
+/* footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Styles pour le footer */
+/*
+footer {
+    background-color: #08396d;
+    color: #ffffff;
+    padding: 3rem 0;
+}
+
+.footer-content {
+   display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hospital-info,
+.quick-links,
+.social-links {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.hospital-info h3,
+.quick-links h3,
+.social-links h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.quick-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quick-links ul li {
+    margin-bottom: 10px;
+}
+
+.quick-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.quick-links a:hover {
+    color: #007bff;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.bottom-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+ */
+
+ .contact {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+.headform{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.headform img{
+    width: 110px;
+}
+
+.headform h1{
+    font-weight: 600;
+    font-size: 45px;
+    color: #1CA7EC;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact input,
+.contact textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #1CA7EC;
+    color: #fff;
+    font-size:18px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.contact button:hover {
+    background-color: #0071a9;
+}
+
+ footer {
+    background-color: #85bffd;
+    color: #ffffff;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer-logo .logo-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.hospital-info p {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.hospital-info i {
+    color: #082f42;
+    font-size: 1.8rem;
+    float: left;
+    margin-right: 20px;
+}
+
+.hospital-info {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.social-links a i{
+    font-size: 30px;
+    margin-left: 30px;
+    color: #0450a2;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hospital-other ul {
+    list-style-type: none; /* Suppression des puces */
+    padding: 0;
+}
+
+hospital-other li {
+    margin: 10px 0; /* Espacement vertical entre les éléments */
+}
+
+/* Style pour les liens */
+.hospital-other a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    color: #ffffff;
+}
+
+/* Style pour les liens au survol */
+.hospital-other a:hover {
+    color: #0056b3;
+}
+
+h3{
+    font-size: 25px;
+    font-weight: 600;
+    color: #115272;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.bottom-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bottom-footer p{
+    font-size: 20px;
+}
+
+
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

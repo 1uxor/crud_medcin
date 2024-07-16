@@ -1,0 +1,41 @@
+/* css/custom.css */
+
+/* body {
+    background: url('../images/logo.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+} */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 1s ease;
+}
+.card:hover{
+    transform: scale(1.0001);
+}
+
+.card-title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.btn {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#imgT{
+    height: 270px;
+}

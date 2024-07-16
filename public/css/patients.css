@@ -1,0 +1,17 @@
+/* Increase font size for body text */
+body {
+    font-size: 16px; /* Adjust as needed */
+}
+
+/* Enlarge table font and overall width */
+.table {
+    font-size: 1rem; /* Adjust as needed */
+    width: 100%; /* Full width of container */
+    max-width: 100%; /* Ensure it doesn't exceed container width */
+}
+
+/* Optional: Increase spacing or padding */
+.table th,
+.table td {
+    padding: 12px; /* Adjust padding as needed */
+}

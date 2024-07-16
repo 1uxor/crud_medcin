@@ -1,0 +1,105 @@
+/* Style CSS pour le formulaire de demande de rendez-vous */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+    background-image: url('../images/home.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.second {
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 120px;
+}
+.firstDiv{
+    width: 100%;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.firstDiv p{
+    color: #007bff;
+    font-size: 69px;
+    font-weight: 700;
+}
+.document{
+    margin-top: 40px;
+}
+.document p{
+   font-size: 20px;
+   font-weight: 700;
+}
+.document li{
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.headRend{
+    text-align: center;
+}
+.headRend img{
+    width: 100px;
+    margin-bottom: 8px;
+}
+label {
+    font-weight: bold;
+}
+
+input[type=text],
+input[type=email],
+textarea,
+input[type=date],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    height: 50px;
+    font-size: 20px;
+}
+
+select {
+    height: 38px;
+}
+
+button[type=submit] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type=submit]:hover {
+    background-color: #0056b1;
+}
+
+textarea {
+    height: 100px;
+}
+
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin-bottom: 10px;
+}
