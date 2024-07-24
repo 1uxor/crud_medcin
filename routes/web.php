@@ -14,6 +14,9 @@ use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\SecretaireController;
 
+use App\Http\Controllers\InvoiceController;
+
+
 // Routes pour les patients
 Route::get('/patients', [PatientController::class, 'index'])->name('patients.index');
 Route::get('/patients/create', [PatientController::class, 'create'])->name('patients.create');
@@ -140,3 +143,6 @@ Route::get('/hospitalization-reports/{id}/pdf', [HospitalizationReportController
 
 
     Route::get('/secretaire', [SecretaireController::class, 'index'])->name('secretaires.index');
+
+    Route::get('/factures-et-rapports', [InvoiceController::class, 'showActs'])->name('show_acts');
+    Route::post('/generate-invoice', [InvoiceController::class, 'generateInvoice'])->name('generate_invoice');
