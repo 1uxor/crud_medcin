@@ -43,7 +43,7 @@
 
         <h1 class="display-5 fw-bold">Hi, Secrétaire  {{ auth()->user()->name }}</h1>
         <p class="col-md-8 fs-4">Bienvenu dans ce site Ma médcine.<br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, eum! Eius ad, fugit consectetur molestiae ipsum iste veritatis molestias quas voluptas commodi provident magnam, ut rem porro eum, alias adipisci.</p>
-        <a href="{{route('secretaires.index')}}" class="btn btn-primary btn-lg">Demander</a>
+        <a href="#" class="btn btn-primary btn-lg">Demander</a>
 
       </div>
     </div>

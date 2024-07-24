@@ -14,8 +14,10 @@ use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\SecretaireController;
 
-use App\Http\Controllers\InvoiceController;
 
+
+use App\Http\Controllers\InvoiceController;
+use App\Models\HospitalizationReport;
 
 // Routes pour les patients
 Route::get('/patients', [PatientController::class, 'index'])->name('patients.index');
@@ -144,5 +146,7 @@ Route::get('/hospitalization-reports/{id}/pdf', [HospitalizationReportController
 
     Route::get('/secretaire', [SecretaireController::class, 'index'])->name('secretaires.index');
 
-    Route::get('/factures-et-rapports', [InvoiceController::class, 'showActs'])->name('show_acts');
-    Route::post('/generate-invoice', [InvoiceController::class, 'generateInvoice'])->name('generate_invoice');
+
+    Route::get('/factures-et-rapports', [InvoiceController::class, 'index'])->name('invoices.index');
+    Route::get('/invoices/download/{id}', [InvoiceController::class, 'downloadInvoice'])->name('invoices.download');
+    Route::get('/reports/download/{id}', [HospitalizationReportController::class, 'downloadReport'])->name('reports.download');

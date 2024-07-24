@@ -1,24 +1,25 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Actes;
+use App\Models\Patient;
+use App\Models\Facture;
 
 class InvoiceController extends Controller
 {
-    public function showActs()
+    public function index()
     {
-        $actes = Actes::all();
-        return view('select_acts', compact('actes'));
+        // Debugging to see if the data is being retrieved
+        $patients = Patient::with(['facture', 'hospitalizationReport'])->get();
+        //dd($patients);
+
+        return view('invoices.index', compact('patients'));
     }
 
-    public function generateInvoice(Request $request)
+    public function downloadInvoice($id)
     {
-        $acteIds = $request->input('actes');
-        $actes = Actes::whereIn('id_a', $acteIds)->get();
-        $total = $actes->sum('cout');
-
-        return view('invoice', compact('actes', 'total'));
+        $facture = Facture::findOrFail($id);
+        $pathToFile = storage_path('app/public/invoices/' . $facture->file_name);
+        return response()->download($pathToFile);
     }
 }

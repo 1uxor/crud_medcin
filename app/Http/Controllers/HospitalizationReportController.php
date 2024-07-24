@@ -92,4 +92,17 @@ class HospitalizationReportController extends Controller
         // Télécharger le PDF
         return $pdf->download('hospitalization-report.pdf');
     }
+
+
+    public function downloadReport($id)
+    {
+        $report = HospitalizationReport::findOrFail($id);
+        $pathToFile = storage_path('app/public/reports/' . $report->file_name);
+        return response()->download($pathToFile);
+    }
+
+    public function patient()
+    {
+        return $this->belongsTo(Patient::class, 'id_p', 'id');
+    }
 }

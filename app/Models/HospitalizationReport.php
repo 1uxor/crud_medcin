@@ -26,4 +26,12 @@ class HospitalizationReport extends Model
         'treatment',
         'follow_up_date'
     ];
+    protected $table = 'hospitalization_reports';
+
+    public function patient()
+    {
+        return $this->belongsTo(Patient::class, 'id_p', 'id');
+    }
+
 }
+

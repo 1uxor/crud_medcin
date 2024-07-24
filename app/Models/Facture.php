@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,7 +18,7 @@ class Facture extends Model
     // Relation avec le patient
     public function patient()
     {
-        return $this->belongsTo(Patient::class, 'id_p', 'id_p');
+        return $this->belongsTo(Patient::class, 'id_p', 'id');
     }
 
     // Relation avec le rendez-vous (optionnelle si chaque facture est liée à un rendez-vous)

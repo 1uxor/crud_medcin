@@ -25,5 +25,13 @@ class Patient extends Model
         return $this->hasMany(RendezVous::class, 'id_p', 'id_p');
     }
 
-    // Ajoutez d'autres relations au besoin
+    public function facture()
+    {
+        return $this->hasOne(Facture::class, 'id_p', 'id');
+    }
+
+    public function hospitalizationReport()
+    {
+        return $this->hasOne(HospitalizationReport::class, 'id_p', 'id');
+    }
 }
